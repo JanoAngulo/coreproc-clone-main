@@ -1,5 +1,24 @@
 import { motion } from 'framer-motion'
 const Brands = () => {
+  const brands = [
+    'camel.svg',
+    'beep-web.svg',
+    'BBDO.svg',
+    'Travelbook.svg',
+    'Aeon.svg',
+    'OGIIVY.svg',
+    'pedigree.svg',
+    'johnson-johnson.svg',
+    'hitachi.svg',
+    'POEA.svg',
+    'IMFIP.svg',
+    'Pru-life-UK.svg',
+    'a8.svg',
+    'publicis.svg',
+    'xpressflower.svg',
+    'investvine.svg',
+  ]
+
   return (
     <div id="Clients">
       <div className="w-full h-full">
@@ -24,54 +43,17 @@ const Brands = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4">
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/camel.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/beep-web.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/BBDO.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/Travelbook.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/Aeon.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/OGIIVY.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/pedigree.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/johnson-johnson.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/hitachi.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/POEA.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/IMFIP.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/Pru-life-UK.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/a8.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/publicis.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/xpressflower.svg" />
-          </div>
-          <div className="brand-image ">
-            <motion.img whileHover={{ scale: 1.1 }} transition={{ ease: 'easeInOut' }} className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0" src="/Assets/Brands/investvine.svg" />
-          </div>
+          {brands.map((b) => (
+            <div className="brand-image " key={b}>
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                transition={{ ease: 'easeInOut' }}
+                className="w-full transition-opacity duration-500 grayscale opacity-20 hover:opacity-100 hover:grayscale-0"
+                src={`/Assets/Brands/${b}`}
+                alt={b.split('.')[0].replace(/-/g, ' ') + ' logo'}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
