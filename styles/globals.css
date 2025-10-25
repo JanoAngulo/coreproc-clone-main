@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004edf;
+}
+
+@font-face {
+  font-family: 'GilroyHeavy';
+  src: url('../public/Assets/Fonts/Gilroy-Heavy.ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/Assets/Fonts/Lato-Regular.ttf');
+}
+
+@layer components {
+  html {
+    @apply scroll-smooth scroll-pt-20;
+  }
+
+  .not-found-button {
+    @apply font-Lato font-bold grid md:place-self-auto place-items-center place-self-center
+  2xl:w-72 xl:w-64 lg:w-40 md:w-48 w-[40vw]
+  2xl:h-[75px] xl:h-16 lg:h-12
+  2xl:text-2xl xl:text-xl lg:text-base md:text-sm text-[3vw]
+  lg:p-0 p-2
+  2xl:my-5 xl:my-4 lg:my-3 md:my-2 my-2
+	bg-blue hover:bg-yellow rounded-full uppercase text-white transition-colors duration-150;
+  }
+
+  .box-container {
+    @apply 2xl:px-20 xl:px-14 lg:px-11 md:px-7 px-5 w-full;
+  }
+
+  .hero-container {
+    @apply 2xl:pl-20 xl:pl-14 lg:pl-11 md:pl-0 md:pr-0 bg-contain bg-no-repeat md:bg-gradient-to-b md:from-darkblue-100 md:to-darkblue-300 md:rounded-b-none;
+  }
+
+  .nav-link {
+    @apply uppercase text-white font-Lato 2xl:gap-7 xl:gap-6 lg:gap-5 md:gap-4;
+  }
+
+  .footer-box {
+    @apply md:px-86;
+  }
+
+  .footer-nav-link {
+    @apply xl:gap-14 md:gap-5 gap-2;
+  }
+
+  .MainText {
+    @apply font-GilroyHeavy uppercase
+  2xl:text-8xl xl:text-7xl lg:text-5xl md:text-4xl text-[10vw]
+  md:text-left text-center
+  2xl:pb-5 xl:pb-4 lg:pb-3 md:pb-2 pb-2 md:mx-0 mx-5;
+  }
+
+  .SubText {
+    @apply font-Lato
+  2xl:text-[24px] xl:text-[22px] lg:text-[20px] md:text-[16px] text-[4vw]
+  2xl:py-5 xl:py-4 lg:py-3 md:py-2 py-2;
+  }
+
+  .HeroButton {
+    @apply font-Lato font-bold grid md:place-self-auto place-items-center place-self-center
+  2xl:w-96 xl:w-80 lg:w-60 md:w-48 w-[50vw]
+  2xl:h-[75px] xl:h-16 lg:h-12
+  2xl:text-2xl xl:text-xl lg:text-base md:text-sm text-[3vw]
+  lg:p-0 p-2
+  2xl:my-5 xl:my-4 lg:my-3 md:my-2 my-2
+	bg-blue hover:bg-yellow rounded-full uppercase text-white transition-colors duration-150;
+  }
+
+  .content-header {
+    @apply text-yellow uppercase font-GilroyHeavy 2xl:text-8xl xl:text-7xl lg:text-5xl md:text-6xl text-[7vw];
+  }
+
+  .content-header-2 {
+    @apply text-yellow uppercase font-GilroyHeavy 2xl:text-7xl xl:text-6xl lg:text-4xl md:text-5xl text-[6vw];
+  }
+
+  .content-gap {
+    @apply 2xl:gap-[60px] xl:gap-12 lg:gap-7 md:gap-5 gap-5;
+  }
+
+  .image {
+    @apply h-auto 2xl:w-auto xl:w-[30vw] lg:w-[30vw] md:w-[40vw] w-full;
+  }
+
+  .figaro-image {
+    @apply h-auto 2xl:w-auto xl:w-[30vw] lg:w-[30vw] md:w-[40vw] w-[50vw];
+  }
+
+  .content-title {
+    @apply font-bold 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl;
+  }
+
+  .content-description {
+    @apply 2xl:text-xl xl:text-lg md:text-base;
+  }
+
+  .brand-image {
+    @apply grid justify-center place-items-center border px-5 h-[192px] w-full;
+  }
+}
